@@ -1,0 +1,8 @@
+# Use a lightweight Linux distribution with SQLite
+FROM alpine
+
+# Install SQLite
+RUN apk add --no-cache sqlite
+
+# Copy your SQLite database file into the container
+COPY D://DockerProject//SistemaBancario//SistemaBancario//bank.db /app/bank.db
